@@ -32,16 +32,11 @@
     <section class="bodyWrap">
         <h1> Login </h1>
         <form>
-          <label for="Full Name"></label>
-          <input type="text" name="fname" id="fname" value="Full Name..."><br>
-          <label for="Email Address"></label>
-          <input type="text" name="email" id="email" value="Email Address..."><br>
-          <label for="Username"></label>
-          <input type="text" name="username" id="username" value="Username..."><br>
-          <label for="Password"></label>
-          <input type="text" name="password" id="password" value="Password..."><br>
-          <label for="Reset Password"></label>
-          <input type="text" name="retypePassword" id="retypePassword" value="Repeat password...">
+          <label for="Username for Login"></label>
+          <input type="text" name="usernameLogIn" id="usernameLogIn" placeholder="Username or Email Address..."><br>
+          <label for="Password for Login"></label>
+          <input type="text" name="passwordLogIn" id="passwordLogIn" placeholder="Password..."><br>
+
         </form>
 
       </section>
