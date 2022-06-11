@@ -21,7 +21,7 @@
         <li>Other Thing Here</li>
 
         <li class="navRight"><a href="login.php">Login</a></li>
-        <li class="navRight"><a href="signup.php">Sign Up</a></li>
+        <li class="navRight"><a class="active" href="signup.php">Sign Up</a></li>
       </ul>
     </section>
     </div>

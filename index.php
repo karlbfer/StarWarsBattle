@@ -16,7 +16,7 @@
     <div id="wrapper">
     <section>
       <ul>
-        <li class="navLeft"><a href="index.php">SMASH MAINS</a></li>
+        <li class="navLeft"><a class="active" href="index.php">SMASH MAINS</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="https://www.karlferraren.com">Character Select</a></li>
         <li>Other Thing Here</li>

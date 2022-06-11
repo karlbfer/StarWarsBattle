@@ -27,6 +27,8 @@ html {
   display: inline;
   text-align: center; 
 } */
+
+
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
@@ -84,6 +86,11 @@ li button {
 
 li a:hover, li button:hover {
   background-color: rgba(70, 149, 246, 0.864);
+  color: white;
+}
+.active {
+  background-color: rgb(212, 212, 234);
+  color: black;
 }
 
 .navRight {
