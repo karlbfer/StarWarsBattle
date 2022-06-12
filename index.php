@@ -9,6 +9,7 @@
   <!-- css link -->
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+  <script src="app.js"></script>
 </head>
 <body>
 <header>
@@ -34,9 +35,17 @@
         <p>It would be cool to display a video or pre-set version of the api calls to the Smashbros characters. Char vs char with an image that lets us dictate who we think wins in the matchup.</p>
       </section>
     </section>
-
     <section>
-      
+    <div id="app">
+      <img
+        v-bind:src="picture"
+        :alt="`${firstName} ${lastName}`"
+        :class="gender"
+      />
+      <h1>{{firstName}} {{lastName}}</h1>
+      <h3>Email: {{email}}</h3>
+      <button :class="gender" @click="getUser()">Get Random User</button>
+    </div>
     </section>    
 </div>
   <footer>
