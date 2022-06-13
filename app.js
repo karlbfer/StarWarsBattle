@@ -40,6 +40,7 @@ async function getSwapiTwo() {
 
   document.getElementById('nameTwo').textContent = name;
 }
+
 getSwapi();
 getSwapiTwo();
 document.getElementById("characterOne").addEventListener("click", getSwapi);

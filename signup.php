@@ -4,7 +4,7 @@
 ?>
 <section class="signWrap">
   <h2> Signup Here </h2>
-  <form class="signup" action="signup.inc.php" method="post">
+  <form class="signup" action="includes/signup.inc.php" method="post">
     <label for="Full Name"></label>
     <input type="text" name="name" id="name" placeholder="Full Name..."><br>
     <label for="Email Address"></label>
@@ -18,6 +18,8 @@
     <button type="submit" name="submit">Sign Up</button>
   </form>
 </section>
+
+<!-- Will Put Error Messages down here at a later time. -->
 
 <?php
   require_once 'footer.php';
