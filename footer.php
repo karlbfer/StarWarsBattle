@@ -1,5 +1,6 @@
-</div>
+</div> 
 
+<!-- div is the wrapper in header.php -->
 <footer>
   <div id="wrapper">
   <section class="footy">

@@ -9,7 +9,7 @@
       </section> -->
       <section class="bodyWrap">
         <h1 class="battle">WHO WOULD WIN?</h1>
-        <section>
+        <section class="characterSelect">
           <p><span id="name">‎ </span></p>
           <p><span id="nameTwo">‎ </span></p>
           <!-- <button id="characterTwo">Get Random User</button> -->
