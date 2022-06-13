@@ -110,23 +110,50 @@ li a:hover, li button:hover {
 
   padding-right: 10px; /* 3 */
   padding-left:  10px; /* 3 */
-}
 
-#wrapper .mainBody {
+}
+ .mainBody h1 {
+  text-align: center;
+}
+ #wrapper .mainBody {
   background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} 
+.bodyWrap{
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
 }
 
+.bodyWrap > section {
+  background-color: palegreen;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  width: 100%;
+}
 #wrapper .footy {
   background-color: blanchedalmond;
-}
-.bodyWrap {
+  float: left;
+  width: 100%;
+} */
+
+/* .bodyWrap {
   position: fixed;
   top: 70px;
   left: 50%;
   margin-top: 20px;
   margin-left: -60px;
-  /* size:4rem; */
-}
+  
+
+}  */
 
 h1 + section {
   display: flex;

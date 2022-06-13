@@ -17,7 +17,7 @@
 
     <!-- needs to split in section of 3, use stretch on these sections. redo FlexFroggy lol -->
     <div id="wrapper">
-    <section>
+    <section class="header">
       <ul>
         <li class="navLeft"><a class="active" href="index.php">StarWars Battle</a></li>
         <li><a href="about.html">About</a></li>
@@ -30,3 +30,4 @@
     </section>
     </div>
   </header>
+  <div id="wrapper">
