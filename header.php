@@ -30,4 +30,3 @@
     </section>
     </div>
   </header>
-  <div id="wrapper">
