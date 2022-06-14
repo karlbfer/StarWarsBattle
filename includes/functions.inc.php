@@ -80,10 +80,45 @@ function createUser($conn, $name, $email, $username, $password){
 
   $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
 
-  mysqli_stmt_bind_param($stmt, "ssss", $username, $email, $username, $hashedPwd);
+  mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashedPwd);
   mysqli_stmt_execute($stmt);
   mysqli_stmt_close($stmt);
   
   header("location: ../signup.php?error=none");
   exit();
+}
+
+function emptyInputLogin( $username, $password){
+  $result = false;
+  if (empty($username) || empty($password)) {
+      $result = true;
+  }
+  else {
+    $result = false;
+  }
+  return $result;
+}
+
+function loginUser($conn, $username, $password) {
+  $uidExists = userExists($conn, $username, $username);
+
+  if ($uidExists === false) {
+    header("location: ../login.php?error=incorrectLogin");
+    exit();
+  }
+
+  $passwordHashed = $uidExists["usersPwd"];
+  $checkPwd = password_verify($password, $passwordHashed);
+
+  if ($checkPwd === false) {
+    header("location: ../login.php?error=wrongLogin");
+    exit();
+  }
+  else if ($checkPwd === true) {
+    session_start();
+    $_SESSION["userid"] = $uidExists["usersId"];
+    $_SESSION["useruid"] = $uidExists["usersUid"];
+    header("location: ../index.php");
+    exit();
+  }
 }

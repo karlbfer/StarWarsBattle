@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +27,17 @@
         <li><a href="about.html">About</a></li>
         <li><a href="https://www.karlferraren.com">Character Select</a></li>
         <li>Other Thing Here</li>
+        <?php
+          if (isset($_SESSION["userid"])) {
+            echo '<li class="navRight"><a href="profile.php">My Profile</a></li>';
+            echo '<li class="navRight"><a href="includes/logout.inc.php">Log out</a></li>';
+          }
+          else {      
+            echo '<li class="navRight"><a href="login.php">Login</a></li>';
+            echo '<li class="navRight"><a href="signup.php">Sign Up</a></li>';
+          }
+        ?>
 
-        <li class="navRight"><a href="login.php">Login</a></li>
-        <li class="navRight"><a href="signup.php">Sign Up</a></li>
       </ul>
     </section>
     </div>

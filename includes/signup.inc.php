@@ -33,7 +33,7 @@
       exit(); // stops the script from running
     }
     if (userExists($conn, $username, $email) !== false) {
-      header('location: ../signup.php?error=username taken');
+      header('location: ../signup.php?error=usernametaken');
       exit(); // stops the script from running
     }
     // if (pwdLength($password) !== false){
