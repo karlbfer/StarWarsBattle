@@ -99,7 +99,8 @@ function emptyInputLogin( $username, $password){
   return $result;
 }
 
-function loginUser($conn, $username, $password) {
+function loginUser($conn, $username, $password) { // reference this for Character History
+  
   $uidExists = userExists($conn, $username, $username);
 
   if ($uidExists === false) {
