@@ -29,6 +29,20 @@ html {
   text-align: center; 
 } */
 
+.profileWrap {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profileWrap > h2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 
 input[type=text], input[type=password] {
   width: 100%;
