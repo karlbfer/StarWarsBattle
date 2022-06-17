@@ -46,6 +46,7 @@ function pwdMatch($password, $pwdRepeat){
   return $result;
 }
 
+//Function checks database to see if this user exists when signing up
 function userExists($conn, $username, $email){
   $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
   $stmt = mysqli_stmt_init($conn); //initializing a prepared statement
@@ -70,6 +71,7 @@ function userExists($conn, $username, $email){
   mysqli_stmt_close($stmt);
 }
 
+//Creates a user when all other items are met.
 function createUser($conn, $name, $email, $username, $password){
   $sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd) VALUES (?, ?, ?, ?);";
   $stmt = mysqli_stmt_init($conn); //initializing a prepared statement
@@ -122,4 +124,11 @@ function loginUser($conn, $username, $password) { // reference this for Characte
     header("location: ../index.php");
     exit();
   }
+}
+
+function userHistoryExists($conn, $username, $winner){
+
+}
+function sendResults($conn, $username, $winner){
+  
 }

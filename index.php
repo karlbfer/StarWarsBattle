@@ -30,8 +30,8 @@
 
 <form action="savePlayer.php" method="POST">
   <input ID="characterOne" type="text" name="firstCharacter" value="Mario" hidden>
-  <input type="text" name="secondCharacter" value="Luigi" hidden>
-  <input type="text" name="userID"  value="2" hidden>
+  <input ID="characterTwo" type="text" name="secondCharacter" value="Luigi" hidden>
+  <input class ="profUser" type="text" name="username"  value="2" hidden>
   <input type="text" name="winner" value="Mario" hidden>
   <input type="submit" value="Save">
 </form>  

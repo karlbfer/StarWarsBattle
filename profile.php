@@ -25,7 +25,8 @@
   <p> Welcome to your profile! Look at the below section to find a complete history of your imagined 1v1 fights! </p>
   </section>
   <section class="voteHistory">
-    
+  <form class="profileVotes" action="includes/signup.inc.php" method="post"> 
+  </form>
   </section>
 
 

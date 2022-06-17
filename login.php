@@ -15,6 +15,7 @@
 
     <section class="errorHelp">
       <p>‎</p>
+      <!-- Hello this is live errors that appear on unsuccessful login  -->
     <?php
     if (isset($_GET["error"])){
       if($_GET["error"] == "emptyinput") {
