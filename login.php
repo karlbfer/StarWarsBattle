@@ -12,7 +12,7 @@
       <button type="submit" name="submit">Sign Up</button>
     </form>
 
-
+    <!-- ERRORS IF ACCOUNT ALREADY EXISTS -->
     <section class="errorHelp">
       <p>‎</p>
       <!-- Hello this is live errors that appear on unsuccessful login  -->
@@ -31,12 +31,8 @@
     ?>
     </section>
   </section>
-
-  
-
     </section>
 
-    <!-- ERRORS IF ACCOUNT ALREADY EXISTS -->
 
 
 <?php

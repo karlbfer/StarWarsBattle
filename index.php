@@ -7,7 +7,7 @@
     <?php
           if (isset($_SESSION["userid"])) {
             echo '<p>Hello there ' . $_SESSION["useruid"] . '</p>';
-            // echo '';
+            echo '<p id="hiddenUser" hidden> '. $_SESSION["useruid"] . '</p>';
                   
           }
           else {      
@@ -38,8 +38,8 @@
     <input id="winnerOne" type="text" name="firstCharacter" value="mario" hidden>
     <input id="winnerTwo" type="text" name="secondCharacter" value="Luigi" hidden>
     <!-- below is responsible to update username for insertinto statement later on -->
-    <input id="profUser" type="text" name="username" value="NULL" hidden> 
-    <input id="setWinner" type="text" name="winner" value="3" hidden>
+    <input id="profUser" type="text" name="username" value="karlitodudito"> 
+    <input id="setWinner" type="text" name="winner" value="3">
     <input type="submit" name="submit" value="Save Results">
   </form>
   <?php

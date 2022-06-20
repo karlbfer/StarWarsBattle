@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 
 function emptyInputSignup($name, $email, $username, $password, $pwdRepeat){
   $result = false;
@@ -118,7 +118,7 @@ function loginUser($conn, $username, $password) { // reference this for Characte
     exit();
   }
   else if ($checkPwd === true) {
-    session_start();
+    
     $_SESSION["userid"] = $uidExists["usersId"];
     $_SESSION["useruid"] = $uidExists["usersUid"];
     header("location: ../index.php");
@@ -131,18 +131,67 @@ function userHistoryExists($conn, $username, $winner){
 }
 
 function sendResults($conn, $firstCharacter, $secondCharacter, $winner, $username){
-
-  $sql = "INSERT INTO results (character_one, character_two, winner, user_id) VALUES (?,?,?,(SELECT usersid from users where usersuid = ?));"; // prepped SQL statement to save winnerhistory
+  
+  $userIdentification = $_SESSION["userid"];
+  $sql = "INSERT INTO results (character_one, character_two, winner, user_id) VALUES (?,?,?,?);";
+   // prepped SQL statement to save winnerhistory
   $stmt = mysqli_stmt_init($conn); // initialize connection to database
 
   if (!mysqli_stmt_prepare($stmt, $sql)){
-    header('location: ../signup.inc.php?error=insertstmtfailed');
+    header('location: index.php?error=insertstmtfailed');
     exit();
   }
-  mysqli_stmt_bind_param($stmt, "ssss", $firstCharacter, $secondCharacter, $winner, $username);
+  mysqli_stmt_bind_param($stmt, "ssss", $firstCharacter, $secondCharacter, $winner, $userIdentification);
   mysqli_stmt_execute($stmt);
   mysqli_stmt_close($stmt);
 
   header("location: ../index.php?status=ResponseSaved");
   exit();
+}
+// function echoTestFunction() {
+//   echo '<script> console.log("owdy") </script>';
+// }
+
+function retrieveResults($conn, $username){
+  $userIdentification = $_SESSION["userid"];
+
+  $sql = "SELECT * FROM RESULTS WHERE user_id = ?;"; // prepared sql statement to retrieve all information from results table where signed in user is saved
+  //echo $sql;
+  $stmt = mysqli_stmt_init($conn);
+
+  if (!mysqli_stmt_prepare($stmt, $sql)){
+    header('location: profile.php?error=insertstmtfailed');
+    exit();
+  }
+  mysqli_stmt_bind_param($stmt, "s", $userIdentification);
+  mysqli_stmt_execute($stmt);
+  $result = mysqli_stmt_get_result($stmt);
+
+  // if ($row = mysqli_fetch_assoc($result)){
+  //   return $row;
+  // }
+  // else {
+  //   $result = false;
+  //   return $result;
+  // }
+
+  if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+      echo "<tr><td>".$row["character_one"]."</td><td>".$row["character_two"]." ".$row["winner"]."</td></tr>";
+  }
+  echo "</table>";
+  
+  mysqli_stmt_close($stmt);
+  mysqli_close($conn);
+  header("location: ../profile.php?status=resultsRetrieved");
+  exit();
+  } else {
+    echo "0 results";
+
+    mysqli_stmt_close($stmt);
+    // mysqli_close($conn);
+    header("location: ../profile.php?status=noItems");
+    exit();
+  }
 }
