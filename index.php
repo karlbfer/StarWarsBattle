@@ -7,7 +7,8 @@
     <?php
           if (isset($_SESSION["userid"])) {
             echo '<p>Hello there ' . $_SESSION["useruid"] . '</p>';
-
+            // echo '';
+                  
           }
           else {      
             // echo '<li class="navRight"><a href="login.php">Login</a></li>';
@@ -21,20 +22,45 @@
       <section class="bodyWrap">
         <h1 class="battle">WHO WOULD WIN?</h1>
         <section class="characterSelect">
-          <p><span id="name">‎ </span></p>
-          <p><span id="nameTwo">‎ </span></p>
-          <!-- <button id="characterTwo">Get Random User</button> -->
+          <p><span class="characterNameOne" id="name">‎ </span></p>
+          <p><span class="characterNameTwo" id="nameTwo">‎ </span></p>
         </section>
-        <button id="characterOne">Pit Two New Characters</button>
+        <section class="buttonsInBody">
+          <button id="charOneWin">Winner!</button>
+          <button id="characterOne">Pit Two New Characters</button>
+          <button id="charTwoWin">Winner!</button> 
+        </section>
       </section>
 
-<form action="savePlayer.php" method="POST">
-  <input ID="characterOne" type="text" name="firstCharacter" value="Mario" hidden>
-  <input ID="characterTwo" type="text" name="secondCharacter" value="Luigi" hidden>
-  <input class ="profUser" type="text" name="username"  value="2" hidden>
-  <input type="text" name="winner" value="Mario" hidden>
-  <input type="submit" value="Save">
-</form>  
+      
+  <form action="includes/savePlayer.php" method="POST">
+
+    <input id="winnerOne" type="text" name="firstCharacter" value="mario" hidden>
+    <input id="winnerTwo" type="text" name="secondCharacter" value="Luigi" hidden>
+    <!-- below is responsible to update username for insertinto statement later on -->
+    <input id="profUser" type="text" name="username" value="NULL" hidden> 
+    <input id="setWinner" type="text" name="winner" value="3" hidden>
+    <input type="submit" name="submit" value="Save Results">
+  </form>
+  <?php
+    if (isset($_GET["error"])){
+      if($_GET["error"] == "failedToSelectWinner"){
+        echo '<p> Failed to Save response. Please select who will win before saving results! </p>';
+      }
+      
+    }
+    if (isset($_GET["status"])){
+      if($_GET["status"] == "ResponseSaved"){
+        echo '<p> Response Saved Successfully. View History in Profile Page. </p>';
+      }
+    }
+  ?>
+  <script>
+      var strUser = document.getElementById("hiddenUser").textContent;
+      console.log(strUser);
+      document.getElementById("profUser").value = strUser; 
+  </script>  
+
 
 <script src="app.js"></script>
 <?php

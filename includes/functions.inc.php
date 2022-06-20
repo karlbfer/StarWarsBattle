@@ -55,7 +55,7 @@ function userExists($conn, $username, $email){
     exit();
   }
 
-  mysqli_stmt_bind_param($stmt, "ss", $username, $email);
+  mysqli_stmt_bind_param($stmt, "ss", $username, $email); // takes prepped statement, 2 string values, and then the two elements being treated as strings
   mysqli_stmt_execute($stmt);
 
   $resultData = mysqli_stmt_get_result($stmt);
@@ -129,6 +129,20 @@ function loginUser($conn, $username, $password) { // reference this for Characte
 function userHistoryExists($conn, $username, $winner){
 
 }
-function sendResults($conn, $username, $winner){
-  
+
+function sendResults($conn, $firstCharacter, $secondCharacter, $winner, $username){
+
+  $sql = "INSERT INTO results (character_one, character_two, winner, user_id) VALUES (?,?,?,(SELECT usersid from users where usersuid = ?));"; // prepped SQL statement to save winnerhistory
+  $stmt = mysqli_stmt_init($conn); // initialize connection to database
+
+  if (!mysqli_stmt_prepare($stmt, $sql)){
+    header('location: ../signup.inc.php?error=insertstmtfailed');
+    exit();
+  }
+  mysqli_stmt_bind_param($stmt, "ssss", $firstCharacter, $secondCharacter, $winner, $username);
+  mysqli_stmt_execute($stmt);
+  mysqli_stmt_close($stmt);
+
+  header("location: ../index.php?status=ResponseSaved");
+  exit();
 }

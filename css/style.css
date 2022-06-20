@@ -43,7 +43,6 @@ html {
   justify-content: flex-start;
 }
 
-
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
@@ -58,6 +57,9 @@ input[type=text]:focus, input[type=password]:focus {
   width: 130%;
 }
 
+p > .characterNameOne:hover {
+  width: 150%;
+}
 
 ul {
   list-style-type: none;
@@ -175,7 +177,7 @@ li a:hover, li button:hover {
   justify-content: center;
 }
 
-.characterSelect {
+.characterSelect, .buttonsInBody {
   background-color: palegreen;
   display: flex;
   flex-direction: row;
@@ -203,7 +205,7 @@ h1 + section {
 }
 
 
-
+/* 
 section {
   
-}
+} */
