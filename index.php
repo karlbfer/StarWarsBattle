@@ -5,17 +5,16 @@
 
     <section class="mainBody">
     <?php
-          if (isset($_SESSION["userid"])) {
-            echo '<p>Hello there ' . $_SESSION["useruid"] . '</p>';
-            echo '<p id="hiddenUser" hidden> '. $_SESSION["useruid"] . '</p>';
-                  
-          }
-          else {      
-            // echo '<li class="navRight"><a href="login.php">Login</a></li>';
-          }
-        ?>
+      if (isset($_SESSION["userid"])) {
+        echo '<p>Hello there ' . $_SESSION["useruid"] . '</p>';
+        echo '<p id="hiddenUser" hidden> '. $_SESSION["useruid"] . '</p>';
+      }
+      else {      
+        // echo '<li class="navRight"><a href="login.php">Login</a></li>';
+      }
+    ?>
 
-      <h1>Welcome! We pit two Star Wars characters together and task you with chooing who would win in a 1v1 battle.</h1>
+      <h1>Welcome! We pit two Star Wars characters together and task you with deciding the victor of this 1v1 battle.</h1>
       <!-- <section>
         <p>It would be cool to display a video or pre-set version of the api calls to the Smashbros characters. Char vs char with an image that lets us dictate who we think wins in the matchup.</p>
       </section> -->
@@ -44,9 +43,13 @@
   </form>
   <?php
     if (isset($_GET["error"])){
+      if($_GET["error"] == "noUser"){
+        echo '<p> Failed to save response. Please log into an account before trying to save results! </p>';
+      }      
       if($_GET["error"] == "failedToSelectWinner"){
         echo '<p> Failed to Save response. Please select who will win before saving results! </p>';
       }
+
       
     }
     if (isset($_GET["status"])){

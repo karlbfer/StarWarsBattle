@@ -4,7 +4,7 @@ if (isset($_POST["submit"])) {
 
   $firstCharacter = $_POST["firstCharacter"];
   $secondCharacter = $_POST["secondCharacter"];
-  $username = $_POST["username"];
+  // $username = $_POST["username"];
   $winner = $_POST["winner"];
 
   require_once 'dbh.inc.php';
@@ -14,7 +14,7 @@ if (isset($_POST["submit"])) {
     header('location: ../index.php?error=failedToSelectWinner');
     exit(); // stops the script from running
   }
-  sendResults($conn, $firstCharacter, $secondCharacter, $winner, $username);
+  sendResults($conn, $firstCharacter, $secondCharacter, $winner);
 
   // header('location: ../index.php?status=itemSaved');
 }

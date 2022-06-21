@@ -130,14 +130,18 @@ function userHistoryExists($conn, $username, $winner){
 
 }
 
-function sendResults($conn, $firstCharacter, $secondCharacter, $winner, $username){
+function sendResults($conn, $firstCharacter, $secondCharacter, $winner){
+  if (!isset($_SESSION["userid"])) {
+    header('location: ../index.php?error=noUser');
+    exit();
+  }
   $userIdentification = $_SESSION["userid"];
   $sql = "INSERT INTO results (character_one, character_two, winner, user_id) VALUES (?,?,?,?);";
    // prepped SQL statement to save winnerhistory
   $stmt = mysqli_stmt_init($conn); // initialize connection to database
 
   if (!mysqli_stmt_prepare($stmt, $sql)){
-    header('location: index.php?error=insertstmtfailed');
+    header('location: ../index.php?error=insertstmtfailed');
     exit();
   }
   mysqli_stmt_bind_param($stmt, "ssss", $firstCharacter, $secondCharacter, $winner, $userIdentification);
