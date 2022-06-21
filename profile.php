@@ -44,7 +44,7 @@
       if($_POST['history'] == "true"){
    
         $userIdentification = $_SESSION["userid"];
-        $sql = "SELECT * FROM RESULTS WHERE user_id = ?;"; // prepared sql statement to retrieve all information from results table where signed in user is saved
+        $sql = "SELECT * FROM results WHERE user_id = ?;"; // prepared sql statement to retrieve all information from results table where signed in user is saved
         //echo $sql;
         $stmt = mysqli_stmt_init($conn);
 
