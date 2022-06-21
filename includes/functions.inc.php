@@ -131,7 +131,6 @@ function userHistoryExists($conn, $username, $winner){
 }
 
 function sendResults($conn, $firstCharacter, $secondCharacter, $winner, $username){
-  
   $userIdentification = $_SESSION["userid"];
   $sql = "INSERT INTO results (character_one, character_two, winner, user_id) VALUES (?,?,?,?);";
    // prepped SQL statement to save winnerhistory
@@ -154,7 +153,6 @@ function sendResults($conn, $firstCharacter, $secondCharacter, $winner, $usernam
 
 function retrieveResults($conn, $username){
   $userIdentification = $_SESSION["userid"];
-
   $sql = "SELECT * FROM RESULTS WHERE user_id = ?;"; // prepared sql statement to retrieve all information from results table where signed in user is saved
   //echo $sql;
   $stmt = mysqli_stmt_init($conn);
