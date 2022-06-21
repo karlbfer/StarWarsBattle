@@ -9,7 +9,7 @@
       <input type="text" name="username" id="name" placeholder="Username or Email Address..."><br>
       <label for="Password for Login"></label>
       <input type="password" name="password" id="password" placeholder="Password..."><br>
-      <button type="submit" name="submit">Sign Up</button>
+      <button type="submit" name="submit">Sign In</button>
     </form>
 
     <!-- ERRORS IF ACCOUNT ALREADY EXISTS -->
