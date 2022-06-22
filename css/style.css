@@ -12,7 +12,7 @@
 /*******************************************/
 
 html {
-  background-color: rgb(56, 113, 182);
+  background-color: #0f5257;
   size:10px;
   font-size:16px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
@@ -42,14 +42,14 @@ html {
   text-align: center;
 }
  #wrapper .mainBody {
-  background-color: aliceblue;
+  background-color: #d6d3f0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 } 
  .bodyWrap{
-  background-color: aliceblue;
+  background-color: #d6d3f0;
   /* float: left; */
   display: flex;
   justify-content: center;
@@ -63,7 +63,7 @@ html {
   height: 210px;
 } 
 .signWrap{
-  background-color: aliceblue;
+  background-color: #d6d3f0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,7 +72,7 @@ html {
   height: 450px;
 }
 .loginWrap{
-  background-color: aliceblue;
+  background-color: #d6d3f0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,7 +82,7 @@ html {
 }
 
 .profileWrap {
-  background-color: aliceblue;
+  background-color: #d6d3f0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,7 +156,7 @@ li a:hover, li button:hover {
   color: white;
 }
 .active {
-  background-color: rgb(212, 212, 234);
+  background-color: #9c92a3;
   color: black;
 }
 
@@ -228,7 +228,7 @@ li a:hover, li button:hover {
 }
 
 #wrapper .footy {
-  background-color: blanchedalmond;
+  background-color: #7EBDC2;
   /* display: flex;
   align-items: row;
   justify-content: center; */
@@ -294,9 +294,34 @@ h1 + section {
   align-items: center;
 }
 
+.userVoteHistory {
+  border: solid 1px #DDEEEE;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font: normal 13px Arial, sans-serif;
+  border-radius: 10px;
+  width:50%;
+  
+}
+th {
+  background-color: rgb(61, 61, 61);
+  border: solid 1px #DDEEEE;
+  padding: 10px;
+  text-align: left;
+  color: white;
+}
+td {
+  border: solid 1px #DDEEEE;
 
-
-
+  padding: 10px;
+  background-color: #bb4430;
+  color: white;
+}
+.voteHistory {
+  display: flex;
+  flex-direction: column;
+  background-color: #231f20;
+}
 /* 
 section {
   

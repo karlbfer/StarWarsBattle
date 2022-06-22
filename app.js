@@ -22,7 +22,6 @@ function changeWinnerTwo() {
   document.getElementById('nameTwo').style.textDecoration = "underline";
 }
 
-
 async function getSwapi() {
   document.getElementById('name').textContent = 'Loading Character...';
   let newURL = getNewSWAPI();

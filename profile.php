@@ -56,7 +56,7 @@
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
 
-        echo "<table>
+        echo "<table class='userVoteHistory'>
                 <tr>
                   <th>Character One</th>
                   <th>Character Two</th>
