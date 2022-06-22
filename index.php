@@ -2,6 +2,7 @@
   require_once 'header.php';
   // include_once 'xampp\htdocs\meepmerp\meepmerp\header.php';
 ?>
+<script src="math.js" type="text/javascript"></script>
     <section class="mainBody">
       <h1>Welcome! We pit two Star Wars characters together and task you with deciding the victor of this 1v1 battle.</h1>
       <!-- <section>

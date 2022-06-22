@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script> -->
-  <script src="math.js" type="text/javascript"></script>
+  <!-- <script src="math.js" type="text/javascript"></script> -->
 </head>
 <body>
 <header>

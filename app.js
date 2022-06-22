@@ -1,11 +1,3 @@
-// fetch('https://smashbros-unofficial-api.vercel.app/api/v1/ultimate/characters/mario').then(res => res.json()).then(data=>console.log(data))
-// console.log(fetch('https://smashbros-unofficial-api.vercel.app/api/'));
-
-// console.log(fetch('https://randomuser.me/api'));
-
-// console.log(fetch('https://rickandmortyapi.com/api'));
-
-// console.log(fetch('https://smashbros-unofficial-api.vercel.app/api/v1/ultimate/characters/mario'));
 
 function getNewSWAPI() {
   const baseSwapiURL = 'https://swapi.dev/api/people/'
@@ -20,13 +12,17 @@ function getNewSWAPI() {
 
 function changeWinner() {
   document.getElementById('setWinner').value = 0;
+  document.getElementById('name').style.textDecoration = "underline";
+  document.getElementById('nameTwo').style.textDecoration = "none";
 }
 function changeWinnerTwo() {
   document.getElementById('setWinner').value = 1;
+  document.getElementById('name').style.textDecoration = 
+  "none";
+  document.getElementById('nameTwo').style.textDecoration = "underline";
 }
 
 
-// let swapiURL = 'https://swapi.dev/api/people/3';
 async function getSwapi() {
   document.getElementById('name').textContent = 'Loading Character...';
   let newURL = getNewSWAPI();
@@ -41,7 +37,6 @@ async function getSwapi() {
     document.getElementById('winnerOne').value = name;
 }
 
-// const swapiTwoURL= 'https://swapi.dev/api/people/4'
 async function getSwapiTwo() {
   document.getElementById('nameTwo').textContent = 'Loading Character...';
   let newerURL = getNewSWAPI();
