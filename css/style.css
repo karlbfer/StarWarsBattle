@@ -14,7 +14,7 @@
 html {
   background-color: #0f5257;
   size:10px;
-  font-size:16px;
+  font-size:26px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
@@ -32,7 +32,7 @@ html {
 #wrapper {
   margin-right: auto; /* 1 */
   margin-left:  auto; /* 1 */
-  max-width: 960px; /* 2 */
+  max-width: 1440px; /* 2 */
 
   padding-right: 10px; /* 3 */
   padding-left:  10px; /* 3 */
@@ -115,7 +115,7 @@ input[type=text]:focus, input[type=password]:focus {
   color: rgb(221, 209, 44);
   /* margin: 50px, 50px; */
   transform: perspective(30px) rotateX(10deg);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 ul {
