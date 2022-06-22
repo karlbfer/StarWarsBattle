@@ -14,6 +14,7 @@
 html {
   background-color: rgb(56, 113, 182);
   size:10px;
+  font-size:10px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
@@ -28,6 +29,58 @@ html {
   display: inline;
   text-align: center; 
 } */
+#wrapper {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 60rem; /* 2 */
+
+  padding-right: 10px; /* 3 */
+  padding-left:  10px; /* 3 */
+
+}
+ .mainBody h1 {
+  text-align: center;
+}
+ #wrapper .mainBody {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} 
+ .bodyWrap{
+  background-color: aliceblue;
+  /* float: left; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%; 
+  /* height: 200px; */
+  margin: 0 0 50px 0;
+}
+.errorHelp{
+  height: 210px;
+} 
+.signWrap{
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%; 
+  height: 450px;
+}
+.loginWrap{
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%; 
+  height: 250px;
+}
 
 .profileWrap {
   background-color: aliceblue;
@@ -116,58 +169,6 @@ li a:hover, li button:hover {
   float:left;
 }
 
-#wrapper {
-  margin-right: auto; /* 1 */
-  margin-left:  auto; /* 1 */
-
-  max-width: 960px; /* 2 */
-
-  padding-right: 10px; /* 3 */
-  padding-left:  10px; /* 3 */
-
-}
- .mainBody h1 {
-  text-align: center;
-}
- #wrapper .mainBody {
-  background-color: aliceblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-} 
- .bodyWrap{
-  background-color: aliceblue;
-  /* float: left; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%; 
-  /* height: 200px; */
-  margin: 0 0 50px 0;
-}
-.errorHelp{
-  height: 210px;
-} 
-.signWrap{
-  background-color: aliceblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%; 
-  height: 450px;
-}
-.loginWrap{
-  background-color: aliceblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%; 
-  height: 250px;
-}
 
 .signup, .login {
   display: flex;
