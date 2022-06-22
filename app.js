@@ -46,7 +46,7 @@ async function getSwapiTwo() {
 
   document.getElementById('nameTwo').textContent = name;
   // console.log(charNameTwo.value);
-  document.getElementById('nameTwo').value = name;
+  document.getElementById('winnerTwo').value = name;
 }
 
 getSwapi();
