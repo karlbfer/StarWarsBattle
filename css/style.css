@@ -57,8 +57,13 @@ input[type=text]:focus, input[type=password]:focus {
   width: 130%;
 }
 
-p > .characterNameOne:hover {
-  width: 150%;
+.skew {
+  /* width: 150%; */
+  /* transform: rotateX(-75deg) translateZ(40px); */
+  color: rgb(221, 209, 44);
+  /* margin: 50px, 50px; */
+  transform: perspective(30px) rotateX(10deg);
+  font-size: 25px;
 }
 
 ul {
@@ -178,19 +183,76 @@ li a:hover, li button:hover {
 }
 
 .characterSelect, .buttonsInBody {
-  background-color: palegreen;
+  background-color: rgb(1, 1, 1);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content:space-between;
   width: 50%;
+  padding: 3px 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.buttonsInBody {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 #wrapper .footy {
   background-color: blanchedalmond;
-  float: left;
+  /* display: flex;
+  align-items: row;
+  justify-content: center; */
+  float:left;
   width: 100%;
-} */
+  padding: 25px;
+  height: 100%;
+}
 
+.button {
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 1px;
+}
+.leftFoot {
+  float: left;
+  width: 50%;
+}
+.leftFoot > span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  text-decoration: solid;
+}
+.unafiliated {
+  font-size: 11px;
+}
+
+dl {
+  float: left;
+  width: 50%;
+  overflow: hidden;
+  font-size: 20px;
+    /* background: #ff0; */
+  padding: 0;
+  margin: 0
+}
+dt {
+  float: left;
+  width: 50%;
+  /* adjust the width; make sure the total of both is 100% */
+  /* background: #cc0; */
+  padding: 0;
+  margin: 0
+}
+dd {
+  float: left;
+  width: 50%;
+  /* adjust the width; make sure the total of both is 100% */
+  /* background: #dd0; */
+  padding: 0;
+  margin: 0
+}
 
 h1 + section {
   display: flex;
@@ -203,6 +265,8 @@ h1 + section {
   justify-self: center;
   align-items: center;
 }
+
+
 
 
 /* 

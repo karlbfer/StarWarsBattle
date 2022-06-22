@@ -21,8 +21,8 @@
       <section class="bodyWrap">
         <h1 class="battle">WHO WOULD WIN?</h1>
         <section class="characterSelect">
-          <p><span class="characterNameOne" id="name">‎ </span></p>
-          <p><span class="characterNameTwo" id="nameTwo">‎ </span></p>
+          <p class="skew"><span class="characterNameOne" id="name">Loading Character... </span></p>
+          <p class="skew"><span class="characterNameTwo" id="nameTwo">Loading Character...</span></p>
         </section>
         <section class="buttonsInBody">
           <button id="charOneWin">Winner!</button>
