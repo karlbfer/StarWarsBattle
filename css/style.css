@@ -301,7 +301,7 @@ h1 + section {
   font: normal 13px Arial, sans-serif;
   border-radius: 10px;
   width:50%;
-  
+
 }
 th {
   background-color: rgb(61, 61, 61);
@@ -320,7 +320,9 @@ td {
 .voteHistory {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #231f20;
+  padding: 15px;
 }
 /* 
 section {
