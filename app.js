@@ -34,6 +34,12 @@ async function getSwapi() {
 
   // console.log(charName.value);
     document.getElementById('winnerOne').value = name;
+
+  if (document.getElementById('nameTwo').textContent != 'Loading Character...')
+  {
+    document.getElementById('disableResults').disabled = false;
+    document.getElementById('characterOne').disabled = false;
+  }  
 }
 
 async function getSwapiTwo() {
