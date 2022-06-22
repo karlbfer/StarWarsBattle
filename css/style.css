@@ -14,7 +14,7 @@
 html {
   background-color: rgb(56, 113, 182);
   size:10px;
-  font-size:10px;
+  font-size:16px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
@@ -32,8 +32,7 @@ html {
 #wrapper {
   margin-right: auto; /* 1 */
   margin-left:  auto; /* 1 */
-
-  max-width: 60rem; /* 2 */
+  max-width: 960px; /* 2 */
 
   padding-right: 10px; /* 3 */
   padding-left:  10px; /* 3 */
