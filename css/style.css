@@ -14,7 +14,7 @@
 html {
   background-color: rgb(56, 113, 182);
   size:10px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 
@@ -138,12 +138,14 @@ li a:hover, li button:hover {
 } 
  .bodyWrap{
   background-color: aliceblue;
+  /* float: left; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%; 
-  height: 200px;
+  /* height: 200px; */
+  margin: 0 0 50px 0;
 }
 .errorHelp{
   height: 210px;
@@ -193,12 +195,38 @@ li a:hover, li button:hover {
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
 }
+
+.characterSelectTwo, .buttonsInBodyTwo {
+  background-color: rgb(1, 1, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  width: 50%;
+  padding: 3px 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
 .buttonsInBody {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
 }
+.notSignedInResults {
+  background-color: rgb(1, 1, 1);
+  width: 50%;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+  
+}
+
 #wrapper .footy {
   background-color: blanchedalmond;
   /* display: flex;

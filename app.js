@@ -28,6 +28,7 @@ function changeWinnerTwo() {
 
 // let swapiURL = 'https://swapi.dev/api/people/3';
 async function getSwapi() {
+  document.getElementById('name').textContent = 'Loading Character...';
   let newURL = getNewSWAPI();
   const result = await fetch(newURL);
   const info = await result.json();
@@ -35,13 +36,14 @@ async function getSwapi() {
   const {name} = info;
 
   document.getElementById('name').textContent = name;
-  var charName = document.getElementById('winnerOne');
+
   // console.log(charName.value);
-  charName.value = name;
+    document.getElementById('winnerOne').value = name;
 }
 
 // const swapiTwoURL= 'https://swapi.dev/api/people/4'
 async function getSwapiTwo() {
+  document.getElementById('nameTwo').textContent = 'Loading Character...';
   let newerURL = getNewSWAPI();
   const res = await fetch(newerURL);
   const data = await res.json();
@@ -49,9 +51,8 @@ async function getSwapiTwo() {
   const {name} = data;
 
   document.getElementById('nameTwo').textContent = name;
-  var charNameTwo = document.getElementById('winnerTwo');
   // console.log(charNameTwo.value);
-  charNameTwo.value = name;
+  document.getElementById('nameTwo').value = name;
 }
 
 getSwapi();

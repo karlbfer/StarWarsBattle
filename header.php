@@ -24,8 +24,8 @@
     <section class="header">
       <ul>
         <li class="navLeft"><a class="active" href="index.php">StarWars Battle</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="https://www.karlferraren.com">Character Select</a></li>
+        <li><a href="#skew">Character Select</a></li>
+        <li><a href="https://www.karlferraren.com">Other Work</a></li>
         <?php
           if (isset($_SESSION["userid"])) {
             echo '<li class="navRight"><a href="profile.php">My Profile</a></li>';
