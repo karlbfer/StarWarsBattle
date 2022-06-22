@@ -43,6 +43,7 @@ html {
 }
  #wrapper .mainBody {
   background-color: #d6d3f0;
+  /* padding: 0 5px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,7 +235,7 @@ li a:hover, li button:hover {
   justify-content: center; */
   float:left;
   width: 100%;
-  padding: 25px;
+  padding: 52px;
   height: 100%;
 }
 
