@@ -13,9 +13,10 @@
         if (isset($_SESSION["userid"])) {
         echo 
         '
-        <h2 class="battle">WHO WOULD WIN?</h1>';
+        <h2 class="battle">WHO WOULD WIN?</h2>';
         }
       ?>
+        <!-- <span id="loadingCharacter">Loading Character</span> -->
         <section class="characterSelect">
           <p class="skew"><span class="characterNameOne" id="name">Loading Character... </span></p>
           <p class="skew"><span class="characterNameTwo" id="nameTwo">Loading Character...</span></p>
@@ -36,7 +37,7 @@
           <!-- below is responsible to update username for insertinto statement later on -->
           <input id="profUser" type="text" name="username" value="ayo" hidden> 
           <input id="setWinner" type="text" name="winner" value="3" hidden>
-          <input type="submit" name="submit" value="Save Results">
+          <input id="disableResults" type="submit" name="submit" value="Save Results">
         </form>';
         }
         else {
@@ -44,7 +45,7 @@
           '
           <section class="notSignedInResults">
           <button id="charOneWin" hidden>Winner!</button>
-          <button id="characterOne">Pit Two New Characters</button>
+          <button id="characterOne" disabled="true">Pit Two New Characters</button>
           <button id="charTwoWin" hidden>Winner!</button> 
           </section>
           <h2 class="battle">Please create an account to Save Results above.</h1>
@@ -52,53 +53,10 @@
         </section>
           <input id="winnerOne" type="text" name="firstCharacter" value="mario" hidden>
           <input id="winnerTwo" type="text" name="secondCharacter" value="Luigi" hidden>
+          <input id="disableResults" type="submit" name="submit" value="Save Results" hidden>
           ';
         }
          ?>
-
-<!-- if (isset($_SESSION["userid"])) {
-  
-        echo 
-        '
-        <h2 class="battle">WHO WOULD WIN?</h1>
-        <section class="characterSelect">
-          <p class="skew"><span class="characterNameOne" id="name">Loading Character... </span></p>
-          <p class="skew"><span class="characterNameTwo" id="nameTwo">Loading Character...</span></p>
-        </section>
-        <section class="buttonsInBody">
-          <button id="charOneWin">Winner!</button>
-          <button id="characterOne">Pit Two New Characters</button>
-          <button id="charTwoWin">Winner!</button> 
-        </section>
-      </section>
-        <form action="includes/savePlayer.php" method="POST">
-
-          <input id="winnerOne" type="text" name="firstCharacter" value="mario" hidden>
-          <input id="winnerTwo" type="text" name="secondCharacter" value="Luigi" hidden>
-          <!-- below is responsible to update username for insertinto statement later on
-          <input id="profUser" type="text" name="username" value="ayo" hidden> 
-          <input id="setWinner" type="text" name="winner" value="3" hidden>
-          <input type="submit" name="submit" value="Save Results">
-        </form>';
-        }
-        else {
-          echo
-          '
-           <h2 class="battle">Please create an account to Save Results below.</h1>
-           <p> To select a winner, you must sign up.</p>
-          <section class="characterSelect">
-            <p class="skew"><span id="name">No Char Loaded</span></p>
-            <p class="skew"><span id="nameTwo">No Char Loaded</span></p>
-          </section>
-          <section class="notSignedInResults">
-          <button id="charOneWin" hidden>Winner!</button>
-          <button id="characterOne">Pit Two New Characters</button>
-          <button id="charTwoWin" hidden>Winner!</button> 
-          </section>
-        </section>
-          ';
-          
-        } -->
 
   <?php
     if (isset($_GET["error"])){
@@ -115,11 +73,11 @@
       }
     }
   ?>
-  <script>
+  <!-- <script>
       var strUser = document.getElementById("hiddenUser").textContent;
       console.log(strUser);
       document.getElementById("profUser").value = strUser; 
-  </script>  
+  </script>   -->
 
 
 <script src="app.js"></script>

@@ -37,6 +37,8 @@ async function getSwapi() {
 }
 
 async function getSwapiTwo() {
+  document.getElementById('disableResults').disabled = true;
+  document.getElementById('characterOne').disabled = true;
   document.getElementById('nameTwo').textContent = 'Loading Character...';
   let newerURL = getNewSWAPI();
   const res = await fetch(newerURL);
@@ -47,6 +49,11 @@ async function getSwapiTwo() {
   document.getElementById('nameTwo').textContent = name;
   // console.log(charNameTwo.value);
   document.getElementById('winnerTwo').value = name;
+  if (document.getElementById('name').textContent != 'Loading Character...')
+  {
+    document.getElementById('disableResults').disabled = false;
+    document.getElementById('characterOne').disabled = false;
+  }
 }
 
 getSwapi();
