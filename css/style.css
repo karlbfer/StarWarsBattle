@@ -239,8 +239,9 @@ li a:hover, li button:hover {
 }
 
 .button {
-  background-color: aliceblue;
+  background-color: #0B3142;
   border-radius: 5px;
+  color: white;
   padding: 1px;
 }
 .leftFoot {
@@ -321,6 +322,7 @@ td {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   background-color: #231f20;
   padding: 15px;
 }
